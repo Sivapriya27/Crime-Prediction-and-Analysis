@@ -1,0 +1,10 @@
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+pyyaml>=6.0.1
+joblib>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+xgboost>=2.0
+kaggle>=1.6
+tabulate>=0.9
