@@ -88,7 +88,9 @@ Includes data download, cleaning/feature engineering, modeling, evaluation, erro
 ## 🗂 Dataset
 
 **Kaggle**: Crime in Vancouver (2003–2017). This dataset includes columns like TYPE, YEAR, MONTH, DAY, HOUR, MINUTE, HUNDRED_BLOCK, NEIGHBOURHOOD, X, Y, Latitude, Longitude. 
+
 Kaggle API notes : Create ~/.kaggle/kaggle.json with your API token (from Kaggle → Account → Create New Token).
+
 Or manually download the CSV from Kaggle and drop it into data/raw/ as crime.csv.
 The downloader script will detect it and skip the API call.
 
@@ -107,7 +109,9 @@ The downloader script will detect it and skip the API call.
 ## 🔧 Troubleshooting
 
 No Kaggle credentials? Place crime.csv in data/raw/ and re-run.
+
 Memory errors? Decrease train.sample_frac in config.yaml.
+
 Plot issues on headless servers? Set MPLBACKEND=Agg.
 
 ---
