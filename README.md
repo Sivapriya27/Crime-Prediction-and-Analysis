@@ -1,4 +1,4 @@
-# Crime Prediction & Analysis (Vancouver) — ML Pipeline
+# Crime Prediction & Analysis (Vancouver) - ML Pipeline
 
 End-to-end, reproducible ML project that predicts **crime type** from time/location/context using the Vancouver Police open data (via Kaggle) by Supervised Machine Learning - Classification. 
 Includes data download, cleaning/feature engineering, modeling, evaluation, error analysis, and tests.
@@ -20,27 +20,22 @@ Includes data download, cleaning/feature engineering, modeling, evaluation, erro
 ### 1. Supervised Machine Learning - Classification
 - **Target Variable:** `TYPE` (crime type)  
 - **Input Features:** Time, location, and other categorical features  
-
 ### 2. Feature Engineering
 - **Cyclical Features:** Transformed time-based features using sine and cosine functions:  
   - `month_sin`, `month_cos`  
   - `hour_sin`, `hour_cos`  
 - **Categorical Encoding:** One-hot encoding applied to `NEIGHBOURHOOD`  
 - **Numeric Scaling:** StandardScaler applied to `latitude` and `longitude`  
-
 ### 3. Pipeline
 - Utilizes **`ColumnTransformer` + `Pipeline`** to ensure consistent transformation of both training and test datasets  
-
 ### 4. Modeling
 - **Primary Model:** Random Forest (default)  
 - **Alternative Options:** Logistic Regression, XGBoost  
 - Supports **multi-class classification**  
-
 ### 5. Evaluation
 - Predictions are saved as CSV files  
 - Summaries include counts of each predicted class  
 - **Error Analysis:** Jupyter notebook available to inspect correct vs. incorrect predictions  
-
 ### 6. Testing
 - Unit tests for feature engineering and data cleaning:  
   - `tests/test_features.py`  
@@ -93,11 +88,7 @@ Includes data download, cleaning/feature engineering, modeling, evaluation, erro
 ## 🗂 Dataset
 
 **Kaggle**: Crime in Vancouver (2003–2017). This dataset includes columns like TYPE, YEAR, MONTH, DAY, HOUR, MINUTE, HUNDRED_BLOCK, NEIGHBOURHOOD, X, Y, Latitude, Longitude. 
-
-Kaggle API notes
-
-Create ~/.kaggle/kaggle.json with your API token (from Kaggle → Account → Create New Token).
-
+Kaggle API notes : Create ~/.kaggle/kaggle.json with your API token (from Kaggle → Account → Create New Token).
 Or manually download the CSV from Kaggle and drop it into data/raw/ as crime.csv.
 The downloader script will detect it and skip the API call.
 
@@ -116,9 +107,7 @@ The downloader script will detect it and skip the API call.
 ## 🔧 Troubleshooting
 
 No Kaggle credentials? Place crime.csv in data/raw/ and re-run.
-
 Memory errors? Decrease train.sample_frac in config.yaml.
-
 Plot issues on headless servers? Set MPLBACKEND=Agg.
 
 ---
